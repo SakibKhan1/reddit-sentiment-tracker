@@ -3,6 +3,8 @@
 A **Flask web application** that analyzes the sentiment of a keyword on Reddit’s r/nba subreddit.  
 It fetches the top 30 hot posts and all their comments, counts how often your keyword appears and shows how many mentions are positive or negative. Results are displayed as a clear chart for visualization.
 
+All required Python packages are specified in the included `requirements.txt` file. Simply install them with `pip install -r requirements.txt`.
+
 ---
 
 ## Screenshots of my project 
