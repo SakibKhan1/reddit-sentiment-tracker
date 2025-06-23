@@ -8,10 +8,10 @@ It fetches the top 30 hot posts and all their comments, counts how often your ke
 ## 📸 Screenshots of my project 
 
 ### ✅ Home Page
-![Home Page](screenshots/home_page.jpg)
+![Home Page](screenshots/home_page.JPG)
 
 ### ✅ Results Page
-![Results Page](screenshots/results_page.pg)
+![Results Page](screenshots/results_page.JPG)
 
 ---
 
