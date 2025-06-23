@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reddit Keyword Sentiment Analyzer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      background: url("{{ url_for('static', filename='nba_background.jpeg') }}") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .form-container {
+      position: absolute;    
+      top: 12%;              /* smaller percent moves more up */
+      left: 20%;             /* larger percent moves more right */
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px; /*control logo size */
+      display: block;
+      margin: 0 auto 20px auto; /*Centered + spacing below */
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    label {
+      color: white;
+    }
+
+    input {
+      margin: 10px 0;
+      padding: 8px;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .note-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      color: black;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <!-- NBA logo to show r/nba focused project -->
+    <img src="{{ url_for('static', filename='nba_logo.png') }}" alt="NBA Logo" class="logo">
+
+    <h1>Reddit Keyword Sentiment Tracker</h1>
+    <form method="post">
+      <label>Subreddit (default: nba):</label><br>
+      <input type="text" name="subreddit" placeholder="nba"><br>
+      <label>Keyword to track:</label><br>
+      <input type="text" name="keyword" required><br>
+      <button type="submit">Analyze</button>
+    </form>
+  </div>
+
+  <div class="note-box">
+    <u>Note:</u> Showing top 30 hot posts. May take up to a minute to analyze.
+  </div>
+</body>
+</html>

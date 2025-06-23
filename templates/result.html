@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      background: url("{{ url_for('static', filename='nba_background.jpeg') }}") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    /* the result box that will give analysis and results */ 
+    .result-container {
+      margin-left: 300px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center; 
+    }
+
+    .logo {
+      width: 100px;  
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+
+    img.chart {
+      max-width: 500px;
+      border-radius: 8px;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .note-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      color: black;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="result-container">
+    <!-- NBA logo above title to show r/nba focus for project -->
+    <img src="{{ url_for('static', filename='nba_logo.png') }}" alt="NBA Logo" class="logo">
+
+    <h1>Results for '{{ keyword }}' in r/{{ subreddit }}</h1>
+    <p>Total mentions: {{ total }}</p>
+    <p>Positive mentions: {{ positive }}
+      {% if positive_words %}
+        ({{ positive_words | join(", ") }})
+      {% endif %}
+    </p>
+    <p>Negative mentions: {{ negative }}
+      {% if negative_words %}
+        ({{ negative_words | join(", ") }})
+      {% endif %}
+    </p>
+
+    <h2>Chart:</h2>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Chart" class="chart">
+
+    <p><a href="/">Analyze another keyword</a></p>
+  </div>
+
+  <div class="note-box">
+    <u>Note:</u> Showing top 30 hot posts. May take up to a minute to analyze.
+  </div>
+</body>
+</html>
