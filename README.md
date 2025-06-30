@@ -6,6 +6,39 @@ It fetches the top 30 hot posts and all their comments, counts how often your ke
 All required Python packages are specified in the included `requirements.txt` file. Simply install them with `pip install -r requirements.txt`.
 
 ---
+## ✅ User Stories
+
+The following **required** functionality is implemented:
+
+- ✅ User can **enter a keyword and subreddit** into the input fields on the homepage  
+- ✅ User can **submit the form** to trigger a sentiment analysis using Reddit's top 30 hot posts  
+- ✅ The app fetches **comments from all posts**, filters them for keyword mentions, and classifies sentiment as positive or negative  
+- ✅ Results display a **count of total, positive, and negative mentions** along with example words  
+- ✅ User sees a **bar chart visualization** that distinguishes sentiment categories  
+- ✅ The app provides a clean **dark-themed UI** featuring NBA imagery and branding  
+- ✅ Includes a **"Analyze another keyword"** button to restart the flow  
+
+---
+
+## Optional Features
+
+- ✅ Keyword sentiment is based on **custom positive and negative slang dictionaries**  
+- ✅ Sentiment scoring uses **simple NLP logic** with manually curated vocabulary  
+- ✅ Default subreddit is **pre-filled as "nba"** but can be changed manually  
+- ✅ Supports **real-time chart rendering** using `matplotlib` and `base64` encoding  
+- ✅ Displays **loading notice** when processing large amounts of comments  
+
+---
+
+## Additional Features
+
+- ✅ Custom UI built with **Flask templates** and static assets  
+- ✅ **Matplotlib charts** rendered on the server and embedded into HTML  
+- ✅ NBA-themed styling with image backgrounds and branding consistency  
+- ✅ Clear modular separation between logic, templates, and configuration  
+- ✅ Environment variables (`.env`) used to protect Reddit API credentials  
+
+---
 
 ## Screenshots of my project 
 
