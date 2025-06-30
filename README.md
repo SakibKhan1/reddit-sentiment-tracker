@@ -18,7 +18,6 @@ The following **required** functionality is implemented:
 - ✅ The app provides a clean **dark-themed UI** featuring NBA imagery and branding  
 - ✅ Includes a **"Analyze another keyword"** button to restart the flow  
 
----
 
 ## Optional Features
 
@@ -28,7 +27,6 @@ The following **required** functionality is implemented:
 - ✅ Supports **real-time chart rendering** using `matplotlib` and `base64` encoding  
 - ✅ Displays **loading notice** when processing large amounts of comments  
 
----
 
 ## Additional Features
 
