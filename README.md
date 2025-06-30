@@ -5,6 +5,16 @@ It fetches the top 30 hot posts and all their comments, counts how often your ke
 
 All required Python packages are specified in the included `requirements.txt` file. Simply install them with `pip install -r requirements.txt`.
 
+## 🔧 Built With
+
+- **Flask** – Lightweight Python web framework for handling routes and rendering templates  
+- **PRAW (Python Reddit API Wrapper)** – To fetch Reddit posts and comments  
+- **Matplotlib** – For generating bar chart visualizations of sentiment data  
+- **HTML + Jinja Templates** – Used to structure and render the UI  
+- **CSS** – Custom styling for dark-themed NBA-inspired design  
+- **dotenv** – Loads environment variables for Reddit API credentials  
+- **Python I/O & base64** – Embeds generated charts directly into HTML as images  
+
 ---
 ## ✅ User Stories
 
